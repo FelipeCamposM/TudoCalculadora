@@ -1,6 +1,24 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Header from "./components/Header/page";
+import Footer from "./components/Footer/page";
+
+import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuPortal,
+  DropdownMenuSeparator,
+  DropdownMenuShortcut,
+  DropdownMenuSub,
+  DropdownMenuSubContent,
+  DropdownMenuSubTrigger,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -27,7 +45,21 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      > <Header/>
+        <DropdownMenu>
+          <DropdownMenuTrigger>
+            <Button>Calculadoras</Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent>
+            <DropdownMenuLabel>Calculadoras</DropdownMenuLabel>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem>Calculadora Padrão</DropdownMenuItem>
+            <DropdownMenuItem>Calculadora de Matrizes</DropdownMenuItem>
+            <DropdownMenuItem>Calculadora de Equações</DropdownMenuItem>
+            <DropdownMenuItem>Calculadora de Ano Bissexto</DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
+        <Footer/>
         {children}
       </body>
     </html>
