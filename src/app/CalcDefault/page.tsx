@@ -35,7 +35,6 @@ export default function CalcDefault() {
     </div>
         </Card>
     </main>
-    
   </>
   );
 }

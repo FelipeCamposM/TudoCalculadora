@@ -32,7 +32,7 @@ export default function Header() {
                 <a href="/CalcDefault">Calculadora Padrão</a>
               </DropdownMenuItem>
               <DropdownMenuItem>
-                <a href="/CalcDefault">Calculadora de Matrizes</a>
+                <a href="/CalcMatrizes">Calculadora de Matrizes</a>
               </DropdownMenuItem>
               <DropdownMenuItem>
                 <a href="/CalcDefault">Calculadora de Equações</a>
